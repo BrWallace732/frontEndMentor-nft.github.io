@@ -1,0 +1,76 @@
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--very-dark-blue-main-bg);
+    font-family: 'Outfit', sans-serif;
+}
+.contenedor{
+    max-width: 310px;
+    margin: 5% auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px 20px 10px 20px;
+    color: var(--white);
+    background: var(--very-dark-blue-card-bg);
+}
+.card{
+    background: var(--very-dark-blue-card-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.card-title{
+    font-size: 25px;
+    font-weight: bold;
+}
+.card-title:hover{
+    color: var(--cyan);
+}
+.card-title > p {
+    font-size: 8px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.card-img-top {
+    object-fit: contain; 
+    width: 98%;
+    background-size: cover;
+    border-radius: 25px;
+}
+.card-info{
+    display: flex;
+    justify-content: space-between;
+}
+.eth, .time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.card-avatar{
+    margin-top: 20px;
+    border-top: 1px solid white;
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+.card-avatar > img{
+    object-fit: contain;
+    height: 50px;
+}
