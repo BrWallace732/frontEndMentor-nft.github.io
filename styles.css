@@ -18,6 +18,11 @@ body {
     background-color: var(--very-dark-blue-main-bg);
     font-family: 'Outfit', sans-serif;
 }
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 .contenedor{
     max-width: 310px;
     margin: 5% auto;
@@ -33,6 +38,10 @@ body {
     justify-content: center;
     align-items: center;
     border: none;
+    position: relative;
+}
+.card-body{
+    padding: 1rem 0;
 }
 .card-title{
     font-size: 25px;
@@ -40,6 +49,7 @@ body {
 }
 .card-title:hover{
     color: var(--cyan);
+    cursor: pointer;
 }
 .card-title > p {
     font-size: 8px;
@@ -53,6 +63,29 @@ body {
     background-size: cover;
     border-radius: 25px;
 }
+.card-img-top:hover{
+    opacity: .2;
+    transition: .3s;
+}
+.card__view-item{
+    position: absolute;
+    z-index: -1; /* aqui mando al icono atrás de todo */
+    background-color: var(--Cyan);
+    margin-top: 100px; 
+    margin-left: 55%;
+    margin-right: 45%;
+    transform: translateX(-50px);
+}
+.card_header:hover{
+    background-color: var(--Cyan);
+    opacity: .9;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.card__view-item:hover{
+    z-index: 1;
+    color: var(--Cyan);
+}
 .card-info{
     display: flex;
     justify-content: space-between;
@@ -62,15 +95,31 @@ body {
     align-items: center;
     justify-content: center;
     gap: 5px;
+    color: var(--soft-blue);
+}
+.eth span:hover {
+    color: var(--cyan);
 }
 .card-avatar{
     margin-top: 20px;
-    border-top: 1px solid white;
+    border-top: 1px solid var(--soft-blue);
     padding-top: 10px;
     display: flex;
-    gap: 20px;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
 }
 .card-avatar > img{
+    border: 1px solid white;
+    border-radius: 50%;
     object-fit: contain;
     height: 50px;
+}
+.card-avatar > p > span{
+    color: white;
+}
+
+.card-avatar > p > span:hover{
+    color: var(--cyan);
+    cursor: pointer;
 }
